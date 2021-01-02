@@ -1,0 +1,50 @@
+body {
+  background: black;
+}
+h1 {
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  user-select: none;
+  text-align: center;
+  font-size: 5vh;
+  line-height: 5vh;
+  margin: 47.5vh 0;
+  -webkit-tap-highlight-color: transparent;
+}
+h1:hover, span:hover {
+  cursor: pointer;
+}
+.crackle, .fizz {
+  color: palegreen;
+}
+.pop, .buzz {
+  color: turquoise;
+}
+.cracklepop, .fizzbuzz {
+  color: tomato;
+  font-size: 8vh;
+  line-height: 8vh;
+  margin: 46vh 0;
+}
+.fin, ul {
+  color: #777;
+}
+ul {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 16px 0;
+}
+#controls {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 24px;
+}
+span {
+  margin-left: 16px;
+}
