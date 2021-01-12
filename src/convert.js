@@ -1,9 +1,4 @@
-// Helper functions.
-const multiply = (acc, cur) => acc * cur;
-const map = fn => arr => arr.map(fn);
-const sort = fn => arr => [...arr].sort(fn);
-const compose = (...funcs) => data => 
-  funcs.reduceRight((acc, cur) => cur(acc), data);
+import { compose, map, multiply, sort } from '../lib/utils.js';
 
 // substitute :: (String, [Number]) -> (Number -> String | Number)
 const substitute = (str, multiples) =>
@@ -36,18 +31,4 @@ const makeConverter = compose(
   map(([num, str]) => [[num], str]),
 );
 
-// makeCounter :: [[Number, String]] -> (Number, Number, Number?) -> Iterator
-function makeCounter(pairs) {
-  const convert = makeConverter(pairs);
-  return function* counter(start, end, current = start) {
-    let loop = yield convert(current);
-    if (current < end) {
-      const value = yield* counter(start, end, current + 1);
-      loop = value !== undefined;
-    }
-    if (loop) {
-      yield* counter(start, end);
-    }
-    return;
-  }
-}
+export default makeConverter;
