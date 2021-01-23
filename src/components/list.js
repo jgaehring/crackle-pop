@@ -1,4 +1,4 @@
-import Atom from '../../lib/Atom.js';
+import Atom from '../Atom.js';
 import store from '../store.js';
 import makeConverter from '../convert.js';
 

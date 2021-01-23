@@ -1,4 +1,4 @@
-import { compose, map, multiply, sort } from '../lib/utils.js';
+import { compose, map, multiply, sort } from './utils.js';
 
 // substitute :: (String, [Number]) -> (Number -> String | Number)
 const substitute = (str, multiples) =>

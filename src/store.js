@@ -1,4 +1,4 @@
-import Atom from '../lib/Atom.js';
+import Atom from './Atom.js';
 
 export const cracklePop = [
   [3, 'Crackle'],
